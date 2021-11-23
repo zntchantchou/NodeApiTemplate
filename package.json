@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .ts",
     "build": "npx tsc",
     "start": "node dist/server",
-    "dev": "concurrently -n ts,nodejs -c blue,red \"tsc -w\" \"npx nodemon dist/server\""
+    "dev": "concurrently -n ts,nodejs -c blue,red \"tsc -w\" \"npx nodemon dist/server --ignore '*/logs/*.json'\""
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,9 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
+    "@types/morgan": "^1.9.3",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   }
 }
