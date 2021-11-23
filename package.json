@@ -10,7 +10,6 @@
     "start": "node dist/server",
     "dev": "concurrently -n ts,nodejs -c blue,red \"tsc -w\" \"npx nodemon dist/server\""
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zntchantchou/NodeApiTemplate.git"
